@@ -199,7 +199,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 44,
@@ -251,6 +251,186 @@
       "settings": {
         "heading": "🧐 Why Health & Fitness",
         "heading_two": "Clean Supplements - Made For You"
+      }
+    },
+    "real_result_cHBVkE": {
+      "type": "real-result",
+      "blocks": {
+        "block_RJjkF7": {
+          "type": "block",
+          "settings": {
+            "text": "https://cdn.shopify.com/videos/c/o/v/20ad7432acfb4ed89d0a73b53bac2004.mp4",
+            "img": "shopify://shop_images/Rectangle_462.png",
+            "image_with_text_image": "shopify://shop_images/Group_38782.png",
+            "title": "Magnesium L-Threonate",
+            "price": "$49.95"
+          }
+        },
+        "block_7yUHEM": {
+          "type": "block",
+          "settings": {
+            "text": "https://cdn.shopify.com/videos/c/o/v/02666aae293c442ebe4891a5d7a7ddf7.mp4",
+            "img": "shopify://shop_images/Rectangle_465_2.png",
+            "image_with_text_image": "shopify://shop_images/Group_38782.png",
+            "title": "Magnesium L-Threonate",
+            "price": "$49.95"
+          }
+        },
+        "block_BhBwh7": {
+          "type": "block",
+          "settings": {
+            "text": "https://cdn.shopify.com/videos/c/o/v/3ed6fdeaa5ad4c65bffdd1f27574fe4b.mp4",
+            "img": "shopify://shop_images/Rectangle_4658.png",
+            "image_with_text_image": "shopify://shop_images/Group_38782.png",
+            "title": "Magnesium L-Threonate",
+            "price": "$49.95"
+          }
+        },
+        "block_CKbXGB": {
+          "type": "block",
+          "settings": {
+            "text": "https://cdn.shopify.com/videos/c/o/v/bf9a7b108cd24ee0a771fa0b8105e841.mp4",
+            "img": "shopify://shop_images/Rectangle_4658.png",
+            "image_with_text_image": "shopify://shop_images/Group_38782.png",
+            "title": "Magnesium L-Threonate",
+            "price": "$49.95"
+          }
+        },
+        "block_mjVJCm": {
+          "type": "block",
+          "settings": {
+            "text": "https://cdn.shopify.com/videos/c/o/v/ab3bfd9b7d844ee89cf01b96ce124f65.mp4",
+            "img": "shopify://shop_images/Rectangle_465.png",
+            "image_with_text_image": "shopify://shop_images/Group_38782.png",
+            "title": "Magnesium L-Threonate",
+            "price": "$49.95"
+          }
+        },
+        "block_FrN7XY": {
+          "type": "block",
+          "settings": {
+            "text": "https://cdn.shopify.com/videos/c/o/v/13e273ea8a8849e4b5cee1afadb27582.mp4",
+            "img": "shopify://shop_images/Rectangle_465_1.png",
+            "image_with_text_image": "shopify://shop_images/Group_38782.png",
+            "title": "Magnesium L-Threonate",
+            "price": "$49.95"
+          }
+        }
+      },
+      "block_order": [
+        "block_RJjkF7",
+        "block_7yUHEM",
+        "block_BhBwh7",
+        "block_CKbXGB",
+        "block_mjVJCm",
+        "block_FrN7XY"
+      ],
+      "settings": {
+        "title": "Real People. Real Results.",
+        "product": "magnesium-l-threonate",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body"
+      }
+    },
+    "tab_collection_73DAU9": {
+      "type": "tab-collection",
+      "blocks": {
+        "tab_xdBwwa": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Sleep",
+            "collection": "supplements",
+            "image_count": "0",
+            "products_to_show": 5,
+            "columns_desktop": 4,
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "mpadding_top": 40,
+            "mpadding_bottom": 40
+          }
+        },
+        "tab_aXwVDw": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Cognitive Function",
+            "collection": "blood-sugar",
+            "image_count": "0",
+            "products_to_show": 5,
+            "columns_desktop": 3,
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "mpadding_top": 40,
+            "mpadding_bottom": 40
+          }
+        },
+        "tab_dDQ8Ky": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Foundational Health",
+            "collection": "liver-focus",
+            "image_count": "0",
+            "products_to_show": 5,
+            "columns_desktop": 3,
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "mpadding_top": 40,
+            "mpadding_bottom": 40
+          }
+        },
+        "tab_ee8WbH": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Athletic Performance",
+            "collection": "tummy-focus",
+            "image_count": "0",
+            "products_to_show": 5,
+            "columns_desktop": 3,
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "mpadding_top": 40,
+            "mpadding_bottom": 40
+          }
+        },
+        "tab_iE9yG8": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Hormone Support",
+            "collection": "blood-sugar",
+            "image_count": "0",
+            "products_to_show": 5,
+            "columns_desktop": 3,
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "mpadding_top": 40,
+            "mpadding_bottom": 40
+          }
+        }
+      },
+      "block_order": [
+        "tab_xdBwwa",
+        "tab_aXwVDw",
+        "tab_dDQ8Ky",
+        "tab_ee8WbH",
+        "tab_iE9yG8"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "load_css": true,
+        "show_tab_title": true,
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "show_view_all": true,
+        "btn": "",
+        "url": "",
+        "enable_desktop_slider": false,
+        "enable_quick_add": true,
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "weight_loss_4U3Kgz": {
@@ -323,6 +503,87 @@
         "btn_one": "Take The Plunge",
         "btn_two": "Dive Deeper"
       }
+    },
+    "instagram_9bckKR": {
+      "type": "instagram",
+      "blocks": {
+        "image_mnRda9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_1.png"
+          }
+        },
+        "image_xArJni": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Instagram.png"
+          }
+        },
+        "image_jL8FNV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Instagram_1.png"
+          }
+        },
+        "image_kdcAaG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Instagram_2.png"
+          }
+        },
+        "image_bykk4M": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_2.png"
+          }
+        },
+        "image_GjiKx7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Instagram_3.png"
+          }
+        },
+        "image_FyEyfn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Instagram_4.png"
+          }
+        },
+        "image_gqPmzf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Instagram_5.png"
+          }
+        },
+        "image_PMLk6B": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Instagram_6.png"
+          }
+        },
+        "image_4FjTwC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Instagram_7.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_mnRda9",
+        "image_xArJni",
+        "image_jL8FNV",
+        "image_kdcAaG",
+        "image_bykk4M",
+        "image_GjiKx7",
+        "image_FyEyfn",
+        "image_gqPmzf",
+        "image_PMLk6B",
+        "image_4FjTwC"
+      ],
+      "settings": {
+        "heading_one": "@uncmfrt.com",
+        "heading_two": "Follow Us on Instagram"
+      }
     }
   },
   "order": [
@@ -332,7 +593,10 @@
     "natural_ingredient_tpmUdE",
     "featured_collection",
     "health_fitness_fGRQ43",
+    "real_result_cHBVkE",
+    "tab_collection_73DAU9",
     "weight_loss_4U3Kgz",
-    "ebooks_qpFVhx"
+    "ebooks_qpFVhx",
+    "instagram_9bckKR"
   ]
 }
