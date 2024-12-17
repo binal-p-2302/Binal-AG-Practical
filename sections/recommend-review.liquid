@@ -1,0 +1,68 @@
+{{ 'section-recommended-review.css' | asset_url | stylesheet_tag }}
+
+<div class="recommended-review--wrapper">
+  <div class="page-width">
+    <div class="recommended-review--sec">
+      <div class="recommended-review-left">
+        <div class="doc-review-badge">
+            {% if section.settings.heading_one != blank %}
+            <span>{{ section.settings.heading_one }}</span>
+            {% endif %}
+        </div>
+        <div class="recommended-review--star">
+          {% render 'icon-review' %}
+          {% if section.settings.heading_two != blank %}
+          <p>{{ section.settings.heading_two }}</p>
+          {% endif %}
+        </div>
+      </div> 
+      <div class="recommended-review-right">
+        <div class="recommended-logo--wrapper">
+            {% for block in section.blocks %}
+                {% if block.settings.image != blank %}
+                <div class="recommended-logo">
+                    <img src="{{ block.settings.image | img_url:"1024x1024" }}" width="" height="" alt=""> 
+                </div>
+                {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Recommended Review",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading_one",
+            "label": "Heading One"
+        },
+        {
+            "type": "text",
+            "id": "heading_two",
+            "label": "Heading two"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name":"image",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "presets" : [
+      {
+        "name": "Recommended Review"    
+      }
+    ]
+  }
+{% endschema %}
