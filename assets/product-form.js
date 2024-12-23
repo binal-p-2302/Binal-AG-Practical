@@ -88,6 +88,19 @@ if (!customElements.get('product-form')) {
             } else {
               this.cart.renderContents(response);
             }
+            setTimeout(function() { 
+              $('.block_cart-drawer-collection-slider').slick({
+                infinite: true,
+                slidesToShow: 2,
+                centerMode: true,
+                centerPadding: '86px',
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                prevArrow: $('.drawer-collection-prev'),
+                nextArrow: $('.drawer-collection-next'),
+              })
+          }, 1000);
           })
           .catch((e) => {
             console.error(e);

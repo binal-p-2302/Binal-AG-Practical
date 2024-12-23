@@ -504,6 +504,44 @@
         "btn_two": "Dive Deeper"
       }
     },
+    "latest_article_3N7ViE": {
+      "type": "latest-article",
+      "blocks": {
+        "text_AaY9gX": {
+          "type": "text",
+          "settings": {
+            "article_image": "shopify://shop_images/Rectangle_461.png",
+            "article_heading_one": "Balanced Diet",
+            "article_heading_two": "Taming the Fire Within: Everything You Need to Know About Inflammation",
+            "article_heading_three": "By Emily Thompson",
+            "article_heading_four": "August 31, 2023"
+          }
+        },
+        "text_TBLD6p": {
+          "type": "text",
+          "settings": {
+            "article_image": "shopify://shop_images/Rectangle_461_1.png",
+            "article_heading_one": "Balanced Diet",
+            "article_heading_two": "Optimize Your Sleep with These 15 Strategies",
+            "article_heading_three": "By Emily Thompson",
+            "article_heading_four": "August 31, 2023"
+          }
+        }
+      },
+      "block_order": [
+        "text_AaY9gX",
+        "text_TBLD6p"
+      ],
+      "settings": {
+        "heading_one": "✍️ Blogs",
+        "heading_two": "Latest Articles",
+        "article_image": "shopify://shop_images/Rectangle_460.png",
+        "article_heading_one": "Balanced Diet",
+        "article_heading_two": "Foundational Supplements: Build a Better You",
+        "article_heading_three": "By Emily Thompson",
+        "article_heading_four": "August 31, 2023"
+      }
+    },
     "instagram_9bckKR": {
       "type": "instagram",
       "blocks": {
@@ -597,6 +635,7 @@
     "tab_collection_73DAU9",
     "weight_loss_4U3Kgz",
     "ebooks_qpFVhx",
+    "latest_article_3N7ViE",
     "instagram_9bckKR"
   ]
 }
