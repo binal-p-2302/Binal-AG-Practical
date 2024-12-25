@@ -164,4 +164,28 @@ $(document).ready(function () {
             console.error($atc_success_result);
         }
     }
+
+
+    $(document).on("click", ".quick-view-block .card-sub-box", function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        if ($(".block_sub-box").hasClass("active")) {
+            $(".block_selct-box-pro").removeClass("hidden")
+        } else {
+            $(".block_selct-box-pro").addClass("hidden")
+        }
+    })
+
+    $(document).on("click", ".block-dark-btn", function () {
+        $(this).toggleClass("active");
+        $("body").toggleClass("block_dark")
+    })
+
+    $(document).on("click", ".card-product-subscription--content .card-sub-box", function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        if ($(".block_sub-box").hasClass("active")) {
+            $(".block_selct-box-pro").removeClass("hidden")
+        } else {
+            $(".block_selct-box-pro").addClass("hidden")
+        }
+    });
 });
