@@ -105,3 +105,19 @@
         margin-top: 24px;
     }
 }
+
+@media screen and (max-width:989px){
+    .instagram-content a {
+        margin-top: 0;
+        padding: 10px 25px;
+    }
+}
+
+@media screen and (max-width:749px){
+    .instagram-box.instagram-content {
+        width: 100%;
+    }
+    .instagram-box {
+        width: calc(50% - 8.33px);
+    }
+}

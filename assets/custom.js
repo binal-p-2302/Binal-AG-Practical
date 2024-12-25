@@ -91,13 +91,6 @@ $(document).ready(function () {
             {
                 breakpoint: 749,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 369,
-                settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }
@@ -114,6 +107,15 @@ $(document).ready(function () {
         arrows: true,
         prevArrow: $('.drawer-collection-prev'),
         nextArrow: $('.drawer-collection-next'),
+        responsive: [
+            {
+                breakpoint: 749,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     });
     const $sample_atc_submit_event = async function ($form_data) {
         const $sample_addtocart_result = await fetch('/cart/add.json', {
@@ -147,6 +149,15 @@ $(document).ready(function () {
                     arrows: true,
                     prevArrow: $('.drawer-collection-prev'),
                     nextArrow: $('.drawer-collection-next'),
+                    responsive: [
+                        {
+                            breakpoint: 749,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                            }
+                        }
+                    ]
                 })
             }, 1000);
         } else {

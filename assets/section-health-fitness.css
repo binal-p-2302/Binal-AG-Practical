@@ -42,3 +42,9 @@
     font-size: 17px;
   }
 }
+
+@media screen and (max-width:989px){
+    .health-box {
+      width: calc(50% - 16px);
+    }
+}

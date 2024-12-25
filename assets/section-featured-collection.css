@@ -592,3 +592,15 @@ p.pro-price {
 .block__rest-result .collection__title a {
     color: #1B1F23;
 }
+
+@media screen and (max-width:749px){
+    .custom--navigation button {
+        position: unset;
+        transform: unset;
+    }
+    .custom--navigation {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 20px;
+    }
+}

@@ -99,6 +99,15 @@ if (!customElements.get('product-form')) {
                 arrows: true,
                 prevArrow: $('.drawer-collection-prev'),
                 nextArrow: $('.drawer-collection-next'),
+                responsive: [
+                  {
+                      breakpoint: 749,
+                      settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1,
+                      }
+                  }
+              ]
               })
           }, 1000);
           })

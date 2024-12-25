@@ -58,3 +58,13 @@
     background: #FFF;
     color: #1B1F23;
 }
+
+@media screen and (max-width:749px){
+    .ebooks--wrapper {
+        padding: 150px 30px;
+    }
+    .ebook-btn--wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

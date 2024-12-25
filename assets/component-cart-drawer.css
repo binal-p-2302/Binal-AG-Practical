@@ -954,3 +954,16 @@ cart-drawer-items.is-empty .block__cart-drawer-progress-block {
 cart-drawer-items.is-empty .block_cart-drawer-collection {
     display: none;
 }
+
+@media screen and (max-width:749px){
+  .drawer__cart-items-wrapper {
+    padding: 0;
+  }
+  .block__cart-item-subscribe {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  .block_cart-drawer-collection-title h2 {
+    font-size: 14px;
+  }
+}

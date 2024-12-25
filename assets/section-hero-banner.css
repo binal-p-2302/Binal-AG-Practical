@@ -67,4 +67,7 @@
     line-height: 63px;
     margin: 0 0 30px;
   }
+  .hero-banner-video {
+    padding-top: 100%;
+  }
 }

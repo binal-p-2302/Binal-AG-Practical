@@ -3607,3 +3607,11 @@ ul {
   list-style: none;
   margin: 0;
 }
+
+@media screen and (max-width:990px){
+  nav.header__inline-menu,
+  .header-icon-toggle,
+  .header-right-btn {
+    display: none !important;
+  }
+}

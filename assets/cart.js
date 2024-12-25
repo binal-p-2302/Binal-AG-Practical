@@ -226,6 +226,15 @@ class CartItems extends HTMLElement {
           arrows: true,
           prevArrow: $('.drawer-collection-prev'),
           nextArrow: $('.drawer-collection-next'),
+          responsive: [
+            {
+                breakpoint: 749,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
         });
       });
   }

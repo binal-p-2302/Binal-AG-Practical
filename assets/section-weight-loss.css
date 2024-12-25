@@ -409,3 +409,41 @@ p.afterpay-text svg {
     transform: translateY(-50%);
     right: 20px;
 }
+
+@media screen and (max-width:1200px) {
+    .weight-loss--wrapper-container-slider-box {
+        padding: 0 20px;
+        ;
+    }
+
+    .weight-loss-top-box p {
+        font-size: 12px;
+    }
+
+    .weight-box-product {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width:989px){
+    .weight-loss-box--wrapper {
+        flex-wrap: wrap;
+    }
+    .weight-loss-left,
+    .weight-loss-right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:749px){
+    .weight-loss-top-box--wrapper {
+        flex-wrap: wrap;
+    }
+    .weight-loss-top-box {
+        width: 100%;
+        justify-content: center;
+    }
+    .weight-box-product-list {
+        width: 100%;
+    }
+}

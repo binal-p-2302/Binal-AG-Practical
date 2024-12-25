@@ -1,119 +1,154 @@
 .recommended-review--wrapper {
-    background: #F6F6F5;
-    padding: 24px 0;
-  }
-  
-  .recommended-review--sec {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-  .recommended-review-right {
-    width: calc(100% - 393px);
-    padding-left: 86px;
-  }
-  
+  background: #F6F6F5;
+  padding: 24px 0;
+}
+
+.recommended-review--sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recommended-review-right {
+  width: calc(100% - 393px);
+  padding-left: 86px;
+}
+
+.recommended-review-left {
+  width: 393px;
+  border-right: 1px solid #1B1F231A;
+}
+
+.doc-review-badge span {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #023650;
+  padding: 9.5px 21.5px;
+  margin-bottom: 12px;
+}
+
+.recommended-review--star {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recommended-review--star p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  color: #0D3550;
+}
+
+.recommended-review--star svg {
+  display: block;
+}
+
+.recommended-review-right p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  max-width: 130px;
+  color: #000;
+  margin: 0 0 12px 121px;
+}
+
+.recommended-logo--wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.recommended-logo {
+  background: #fff;
+  border-radius: 8px;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+  padding: 0;
+  max-width: 120px;
+}
+
+.recommended-logo img {
+  width: 100%;
+}
+
+@media (max-width: 1549px) {
   .recommended-review-left {
-      width: 393px;
-      border-right: 1px solid #1B1F231A;
+    width: 330px;
   }
-  
-  .doc-review-badge span {
-    display: inline-block;
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 1);
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 17px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #023650;
-    padding: 9.5px 21.5px;
-    margin-bottom: 12px;
+
+  .recommended-review-right {
+    width: calc(100% - 330px);
+    padding-left: 31px;
   }
-  
-  .recommended-review--star {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+
+  .recommended-logo {
+    min-width: 110px;
   }
-  
-  .recommended-review--star p {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 19px;
-      letter-spacing: 0em;
-      color: #0D3550;
+}
+
+@media (max-width: 1400px) {
+  .recommended-review-left {
+    width: 300px;
   }
-  
-  .recommended-review--star svg {
-    display: block;
+
+  .recommended-review-right {
+    width: calc(100% - 300px);
+    padding-left: 25px;
   }
-  
-  .recommended-review-right p {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0em;
-    text-align: center;
-    max-width: 130px;
-    color: #000;
-    margin: 0 0 12px 121px;
-  }
-  
+
   .recommended-logo--wrapper {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    gap: 10px;
+  }
+
+  .recommended-logo {
+    max-width: 100px;
+    min-width: 100px;
+  }
+
+  .recommended-review--wrapper {
+    padding: 17px 0;
+  }
+}
+
+
+@media screen and (max-width:989px) {
+  .recommended-logo--wrapper {
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width:749px){
+  .recommended-review--sec {
     flex-wrap: wrap;
   }
-  
-  .recommended-logo {
-      background: #fff;
-      border-radius: 8px;
-      min-width: 120px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: auto;
-      padding: 0;
-      max-width: 120px;
-  }
-  
-  .recommended-logo img {
+  .recommended-review-left {
     width: 100%;
+    text-align: center;
   }
-  @media (max-width: 1549px) {
-    .recommended-review-left {
-      width: 330px;
-    }
-    .recommended-review-right {
-      width: calc(100% - 330px);
-      padding-left: 31px;
-    }
-    .recommended-logo {
-      min-width: 110px;
-    }
+  .recommended-review-right {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 0;
   }
-  @media (max-width: 1400px) {
-    .recommended-review-left {
-      width: 300px;
-    }
-    .recommended-review-right {
-      width: calc(100% - 300px);
-      padding-left: 25px;
-    }
-    .recommended-logo--wrapper {
-      gap: 10px;
-    }
-    .recommended-logo {
-      max-width: 100px;
-      min-width: 100px;
-    }
-    .recommended-review--wrapper {
-      padding: 17px 0;
-    }
+  .recommended-review--star {
+    justify-content: center;
   }
-  
+}
