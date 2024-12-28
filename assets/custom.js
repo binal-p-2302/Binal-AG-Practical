@@ -20,51 +20,57 @@ $(document).ready(function () {
         prevArrow: $('.weight-loss-prev'),
         nextArrow: $('.weight-loss-next'),
     });
-    $('.center-slider').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        centerMode: true,
-        arrows: true,
-        prevArrow: $('.block-real .prev'),
-        nextArrow: $('.block-real .next'),
-        dots: false,
-        speed: 300,
-        centerPadding: '20px',
-        infinite: true,
-        autoplaySpeed: 5000,
-        autoplay: false,
-        responsive: [
-            {
-                breakpoint: 1440,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    centerPadding: '150px'
-                },
-            },
-            {
-                breakpoint: 989,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                },
-            },
-            {
-                breakpoint: 749,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 369,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }
-        ]
-    });
+
+    setTimeout(function () {
+        if($('.center-slider').children()?.length > 5){
+    
+            $('.center-slider').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                centerMode: true,
+                arrows: true,
+                prevArrow: $('.block__rest-result .prev'),
+                nextArrow: $('.block__rest-result .next'),
+                dots: false,
+                speed: 300,
+                centerPadding: '20px',
+                infinite: true,
+                autoplaySpeed: 5000,
+                autoplay: false,
+                responsive: [
+                    {
+                        breakpoint: 1440,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            centerPadding: '150px'
+                        },
+                    },
+                    {
+                        breakpoint: 989,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        },
+                    },
+                    {
+                        breakpoint: 749,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 369,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
+            });
+        }
+    }, 500)
     $('.collection-product-grid--wrapper').slick({
         infinite: true,
         slidesToShow: 4,

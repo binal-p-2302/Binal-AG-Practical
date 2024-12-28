@@ -1,13 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
- {
+{
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
@@ -51,7 +42,7 @@
       ],
       "settings": {
         "heading": "Subscribe to our newsletter",
-        "description": "<p>Welcome to UNCMFRT. Sign up for exclusive content and we'll send you 10% off.</p>"
+        "description": "<p>Welcome to UNCMFRT. Sign up for exclusive content and we'll send you 10% off.<\/p>"
       }
     }
   },

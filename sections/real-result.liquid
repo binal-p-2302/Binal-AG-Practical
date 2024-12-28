@@ -92,18 +92,31 @@
                 </video>
               {% endif %}
             </div>
+            {% assign selected_product = all_products[block.settings.product] %}
+            {% if selected_product == blank %}
+              {% assign selected_product = all_products[section.settings.product] %}
+            {% endif %}
             <div class="block_video-title">
               <div class="block-text-left">
                 <div class="block-video-image">
-                  <img src="{{ block.settings.image_with_text_image | img_url:'70x70' }}">
+                  <img src="{{ selected_product.featured_image | img_url:'70x70' }}">
                 </div>
                 <div class="block-video-text">
-                  <p class="pro-title">{{ block.settings.title }}</p>
-                  <p class="pro-price">{{ block.settings.price }}</p>
+                  <p class="pro-title">
+                    {% if selected_product != blank %}
+                      {{ selected_product.title }}
+                    {% endif %}
+                  </p>
+                  <p class="pro-price">
+                    {% if selected_product != blank %}
+                      {{ selected_product.selected_or_first_available_variant.price | money }}
+                    {% endif %}
+                  </p>
                 </div>
               </div>
               <div class="block-left-arrow">
-                {% render 'product-form-plus', section_id: section.id, card_product: section.settings.product %}
+                
+                {% render 'product-form-plus', section_id: section.id, card_product: selected_product %}
               </div>
             </div>
           </div>
@@ -210,19 +223,9 @@
           "label": "main Image"
         },
         {
-          "type": "image_picker",
-          "id": "image_with_text_image",
-          "label": "Image"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "title"
-        },
-        {
-          "type": "text",
-          "id": "price",
-          "label": "price"
+          "type": "product",
+          "id": "product",
+          "label": "Product"
         }
       ]
     }

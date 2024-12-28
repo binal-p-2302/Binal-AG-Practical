@@ -116,6 +116,7 @@
 @media screen and (max-width:749px){
     .instagram-box.instagram-content {
         width: 100%;
+        padding: 10px;
     }
     .instagram-box {
         width: calc(50% - 8.33px);

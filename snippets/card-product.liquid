@@ -22,7 +22,14 @@
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+{% assign discount_calculation = settings.discount_calculation |  newline_to_br %}
+{% assign discount_array = settings.discount_calculation | split: '\n' %}
 
+{% if discount_array != blank %}
+  <script>
+    window.discount_calculation = {{ discount_array | json }};
+  </script>
+{% endif %}
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -221,13 +228,12 @@
               <div class="card-product-review--wrapper">
                 <div class="card-product-review">
                   <svg width="60" height="13" viewBox="0 0 60 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 0.5L7.34708 4.6459H11.7063L8.17963 7.2082L9.52671 11.3541L6 8.7918L2.47329 11.3541L3.82037 7.2082L0.293661 4.6459H4.65292L6 0.5Z" fill="#1B1F23"/>
-<path d="M18 0.5L19.3471 4.6459H23.7063L20.1796 7.2082L21.5267 11.3541L18 8.7918L14.4733 11.3541L15.8204 7.2082L12.2937 4.6459H16.6529L18 0.5Z" fill="#1B1F23"/>
-<path d="M30 0.5L31.3471 4.6459H35.7063L32.1796 7.2082L33.5267 11.3541L30 8.7918L26.4733 11.3541L27.8204 7.2082L24.2937 4.6459H28.6529L30 0.5Z" fill="#1B1F23"/>
-<path d="M42 0.5L43.3471 4.6459H47.7063L44.1796 7.2082L45.5267 11.3541L42 8.7918L38.4733 11.3541L39.8204 7.2082L36.2937 4.6459H40.6529L42 0.5Z" fill="#1B1F23"/>
-<path d="M54 0.5L55.3471 4.6459H59.7063L56.1796 7.2082L57.5267 11.3541L54 8.7918L50.4733 11.3541L51.8204 7.2082L48.2937 4.6459H52.6529L54 0.5Z" fill="#1B1F23"/>
-</svg>
-
+                    <path d="M6 0.5L7.34708 4.6459H11.7063L8.17963 7.2082L9.52671 11.3541L6 8.7918L2.47329 11.3541L3.82037 7.2082L0.293661 4.6459H4.65292L6 0.5Z" fill="#1B1F23"/>
+                    <path d="M18 0.5L19.3471 4.6459H23.7063L20.1796 7.2082L21.5267 11.3541L18 8.7918L14.4733 11.3541L15.8204 7.2082L12.2937 4.6459H16.6529L18 0.5Z" fill="#1B1F23"/>
+                    <path d="M30 0.5L31.3471 4.6459H35.7063L32.1796 7.2082L33.5267 11.3541L30 8.7918L26.4733 11.3541L27.8204 7.2082L24.2937 4.6459H28.6529L30 0.5Z" fill="#1B1F23"/>
+                    <path d="M42 0.5L43.3471 4.6459H47.7063L44.1796 7.2082L45.5267 11.3541L42 8.7918L38.4733 11.3541L39.8204 7.2082L36.2937 4.6459H40.6529L42 0.5Z" fill="#1B1F23"/>
+                    <path d="M54 0.5L55.3471 4.6459H59.7063L56.1796 7.2082L57.5267 11.3541L54 8.7918L50.4733 11.3541L51.8204 7.2082L48.2937 4.6459H52.6529L54 0.5Z" fill="#1B1F23"/>
+                  </svg>
                 </div>
                 <div class="card-product--btn">
                   <span>Add • {{ card_product.price | money }}</span>
@@ -245,11 +251,11 @@
           {%- if show_quick_add -%}
             <div class="card-product-hover--content">
               <div class="card-product-subscription--content">
-                <div class="card-sub-box active">
+                <div class="card-sub-box active" data-type="One Time Purchase">
                     <p>One-Time Purchase</p>
                     <span>{{ card_product.price | money }}</span>
                 </div>
-                <div class="card-sub-box">
+                <div class="card-sub-box" data-type="Subscribe & Save">
                     <p>Subscribe & Save</p>
                   {% assign original_price = card_product.price %}
                   {% assign discount = original_price | times: 0.10 %}
@@ -271,12 +277,16 @@
                       id="{{ product_form_id }}-submit"
                       type="submit"
                       name="add"
-                      class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
+                      class="11 quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
                       aria-haspopup="dialog"
                       aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                       data-product-url="{{ card_product.url }}"
-                    >
+                    > 
+                      {%- if card_product.variants.size > 1 or qty_rules -%}
+                        {{ 'products.product.choose_options' | t }} - {{ card_product.price | money }}
+                      {%- else -%}
                         {{ 'products.product.add_to_cart' | t }} - {{ card_product.price | money }}
+                      {%- endif -%}
                       {%- if horizontal_quick_add -%}
                         <span class="icon-wrap">{% render 'icon-arrow' %}</span>
                       {%- endif -%}
