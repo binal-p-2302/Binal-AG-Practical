@@ -567,7 +567,7 @@
                       {{ product.price | money }}
                     </p>
                     <input name="id" value="{{ product.variants.first.id }}" type="hidden">
-                    <button class="block_cart-drawer-collection-btn">Add to Cart +</button>
+                    <button class="block_cart-drawer-collection-btn"  data-value="{{ product.variants.first.id }}">Add to Cart +</button>
                   </div>
                 </div>
               </div>

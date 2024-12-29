@@ -480,11 +480,16 @@
                   
                   <div class="product_star-reviews">
                     <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z" fill="#0D3550"></path>
-                      <path d="M30 0L32.2451 6.90983H39.5106L33.6327 11.1803L35.8779 18.0902L30 13.8197L24.1221 18.0902L26.3673 11.1803L20.4894 6.90983H27.7549L30 0Z" fill="#0D3550"></path>
-                      <path d="M50 0L52.2451 6.90983H59.5106L53.6327 11.1803L55.8779 18.0902L50 13.8197L44.1221 18.0902L46.3673 11.1803L40.4894 6.90983H47.7549L50 0Z" fill="#0D3550"></path>
-                      <path d="M70 0L72.2451 6.90983H79.5106L73.6327 11.1803L75.8779 18.0902L70 13.8197L64.1221 18.0902L66.3673 11.1803L60.4894 6.90983H67.7549L70 0Z" fill="#0D3550"></path>
-                      <path d="M90 0L92.2451 6.90983H99.5106L93.6327 11.1803L95.8779 18.0902L90 13.8197L84.1221 18.0902L86.3673 11.1803L80.4894 6.90983H87.7549L90 0Z" fill="#0D3550"></path>
+                      <path d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z" fill="#1B1F23
+"></path>
+                      <path d="M30 0L32.2451 6.90983H39.5106L33.6327 11.1803L35.8779 18.0902L30 13.8197L24.1221 18.0902L26.3673 11.1803L20.4894 6.90983H27.7549L30 0Z" fill="#1B1F23
+"></path>
+                      <path d="M50 0L52.2451 6.90983H59.5106L53.6327 11.1803L55.8779 18.0902L50 13.8197L44.1221 18.0902L46.3673 11.1803L40.4894 6.90983H47.7549L50 0Z" fill="#1B1F23
+"></path>
+                      <path d="M70 0L72.2451 6.90983H79.5106L73.6327 11.1803L75.8779 18.0902L70 13.8197L64.1221 18.0902L66.3673 11.1803L60.4894 6.90983H67.7549L70 0Z" fill="#1B1F23
+"></path>
+                      <path d="M90 0L92.2451 6.90983H99.5106L93.6327 11.1803L95.8779 18.0902L90 13.8197L84.1221 18.0902L86.3673 11.1803L80.4894 6.90983H87.7549L90 0Z" fill="#1B1F23
+"></path>
                     </svg>
                   </div>
                 </div>
@@ -506,10 +511,15 @@
                         <td class="variant-col">
                           <div class="variant-info">
                             <div class="varint-img">
+                            {% if variant.image.src != blank %}
                               <img src="{{ variant.image.src | img_url: 'large' }}" height="" width="" alt="{{ variant.title }}" />
+                            {% else %}
+                            <img src="{{ product.featured_image | img_url: 'large' }}" height="" width="" alt="{{ variant.title }}" />
+                            {% endif %}
                             </div>
                             <div class="variant-title">
                                 {{ variant.title }}
+                                <span class="variant_small-title">{{ variant.metafields.custom._variant_info }}</span>
                             </div>
                           </div>
                         </td>
@@ -544,17 +554,17 @@
 
                 <div class="quick-view-total">
                     <ul>
-                        <li>
+                        <li class="quick_cart-btn">
                             <a href="/cart">View Cart</a>
                         </li>
-                        <li>
+                        <li class="quick_cart-btn-totl">
                             <p><span class="total-item-count">0</span>Total Items</p>
                         </li>
-                        <li>
+                        <li class="quick_cart-btn-price">
                             <p>
                                 <span class="total-item-price">$0.00</span>
-                                <span>Product Subtotal</span>
-                                <span>Taxes & shipping calculated at checkout</span>
+                                <span class="total-item-sabtotal">Product Subtotal</span>
+                                <span class="total-item-tax">Taxes & shipping calculated at checkout</span>
                             </p>
                         </li>
                     </ul>

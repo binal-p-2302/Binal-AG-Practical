@@ -51,6 +51,8 @@ $(document).ready(function () {
                         settings: {
                             slidesToShow: 2,
                             slidesToScroll: 1,
+                            centerMode: false,
+                            // centerPadding: '0px',
                         },
                     },
                     {
@@ -58,6 +60,8 @@ $(document).ready(function () {
                         settings: {
                             slidesToShow: 2,
                             slidesToScroll: 1,
+                            centerMode: false,
+                            // centerPadding: '0px',
                         }
                     },
                     {
@@ -65,6 +69,8 @@ $(document).ready(function () {
                         settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1,
+                            centerMode: false,
+                            // centerPadding: '0px',
                         }
                     }
                 ]

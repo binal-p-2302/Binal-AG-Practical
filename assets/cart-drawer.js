@@ -32,6 +32,8 @@ class CartDrawer extends HTMLElement {
     // here the animation doesn't seem to always get triggered. A timeout seem to help
     setTimeout(() => {
       this.classList.add('animate', 'active');
+
+      
     });
 
     this.addEventListener(
@@ -47,6 +49,31 @@ class CartDrawer extends HTMLElement {
     );
 
     document.body.classList.add('overflow-hidden');
+
+
+    setTimeout(() =>{
+      $('.block_cart-drawer-collection-slider').slick({
+        infinite: true,
+        slidesToShow: 2,
+        centerMode: true,
+        centerPadding: '86px',
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        prevArrow: $('.drawer-collection-prev'),
+        nextArrow: $('.drawer-collection-next'),
+        responsive: [
+          {
+              breakpoint: 749,
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+              }
+          }
+      ]
+      });
+    } , 1500)
+
   }
 
   close() {

@@ -138,7 +138,8 @@
     line-height: 19px;
     letter-spacing: 0em;
     text-align: left;
-    color: #0D3550;
+    color: #1B1F23
+;
 }
 
 .featured-collection--wrapper .card__information p {
@@ -388,7 +389,8 @@ body.block_dark .card-product-subscription--content .card-sub-box.active:before 
     transition: all .6s;
     align-items: center;
     justify-content: center;
-    color: #0D3550;
+    color: #1B1F23
+;
 }
 
 .custom--navigation button svg path {
@@ -534,6 +536,19 @@ p.pro-price {
 
 }
 
+@media screen and (max-width: 889px) {
+    .center-slider .slick-center,
+    .center-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+        transform: none;
+    
+    }
+    
+    .center-slider .slick-current.slick-active, .center-slider .slick-slide {
+        transform: none;
+    
+    }
+}
+
 .slick-next,
 .slick-prev {
     z-index: 5;
@@ -599,7 +614,7 @@ p.pro-price {
         transform: unset;
     }
     .custom--navigation {
-        display: flex;
+        display: none;
         justify-content: center;
         margin: 0 0 20px;
     }

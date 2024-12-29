@@ -228,6 +228,31 @@ class CartItems extends HTMLElement {
         }
 
         publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-items', cartData: parsedState, variantId: variantId });
+        
+
+        setTimeout(() =>{
+          $('.block_cart-drawer-collection-slider').slick({
+            infinite: true,
+            slidesToShow: 2,
+            centerMode: true,
+            centerPadding: '86px',
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            prevArrow: $('.drawer-collection-prev'),
+            nextArrow: $('.drawer-collection-next'),
+            responsive: [
+              {
+                  breakpoint: 749,
+                  settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1,
+                  }
+              }
+          ]
+          });
+        } , 1500)
+
       })
       .catch(() => {
         this.querySelectorAll('.loading__spinner').forEach((overlay) => overlay.classList.add('hidden'));
@@ -236,26 +261,11 @@ class CartItems extends HTMLElement {
       })
       .finally(() => {
         this.disableLoading(line);
-        $('.block_cart-drawer-collection-slider').slick({
-          infinite: true,
-          slidesToShow: 2,
-          centerMode: true,
-          centerPadding: '86px',
-          slidesToScroll: 1,
-          dots: false,
-          arrows: true,
-          prevArrow: $('.drawer-collection-prev'),
-          nextArrow: $('.drawer-collection-next'),
-          responsive: [
-            {
-                breakpoint: 749,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }
-        ]
-        });
+
+     
+     
+
+
       });
   }
 

@@ -5,7 +5,7 @@
 .footer-top--wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 150px;
+  gap: 140px;
   padding: 80px 0 85px;
 }
 
@@ -280,4 +280,21 @@ h3.footer-heading {
     flex-direction: column;
     gap: 20px;
   }
+  .footer-top--wrapper{
+    padding-bottom: 40px;
+  }
+  .article-content{
+    display: none;
+  }
+  .article-heading--wrapper {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+.article-box--wrapper{
+  margin-top: 20px;
+}
 }
