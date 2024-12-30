@@ -1,0 +1,154 @@
+.natural-ingredients-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.natural-ingredients-heading h6 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #000;
+}
+
+.natural-ingredients-heading h2 {
+    font-family: Rubik;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 47px;
+    letter-spacing: 0em;
+    color: rgba(27, 31, 35, 1);
+    margin: 8px 0 16px;
+}
+
+.natural-ingredients-heading p {
+    ,
+    animation: ;
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 auto;
+    color: rgba(27, 31, 35, 0.7);
+}
+
+.natural-ingredients-box--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.natural-ingredients-box {
+    width: calc(20% - 16px);
+}
+
+.natural-ingredients-img {
+    padding-bottom: 136.12%;
+    position: relative;
+    border-radius: 8px;
+    overflow:hidden;
+}
+
+.natural-ingredients-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    transform:scale(1);
+    transition:all 0.8s;
+    object-fit: cover;
+}
+.natural-ingredients-box:hover img{
+  transform:scale(1.1);
+}
+.natural-ingredients-content {
+    margin-top: 24px;
+    position: relative;
+    padding-right: 40px;
+}
+
+.natural-ingredients-content h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    color: rgba(27, 31, 35, 1);
+}
+
+.natural-ingredients-content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    margin: 8px 0 0;
+}
+
+.natural-ingredients-content svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform:rotate(0);
+    transition:all 0.6s;
+    cursor: pointer;
+}
+.natural-ingredients-box:hover svg{
+  transform:rotate(45deg)
+}
+.natural-ingredients-box:hover svg path{
+  fill:#000;
+}
+.natural-ingredients-box:hover svg g path{
+  fill:#fff;
+}
+.natural-ingredients--wrapper {
+    padding: 80px 0;
+}
+
+@media (max-width:1500px){
+  .natural-ingredients-content br{
+    display: none;
+  }
+}
+@media (max-width:1400px){
+  .natural-ingredients-content br{
+    display: none;
+  }
+  .natural-ingredients-box--wrapper {
+    gap: 10px;
+  }
+  .natural-ingredients-box {
+    width: calc(20% - 8px);
+  }
+  .natural-ingredients-content svg {
+    width: 32px;
+    height: 32px;
+  }
+  .natural-ingredients-content {
+    margin-top: 20px;
+    padding-right: 32px;
+  }
+  .natural-ingredients-content p {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 8px 0 0;
+  }
+  .natural-ingredients-content h4 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width:989px) and (min-width:750px){
+  .natural-ingredients-box {
+    width: calc(33.33% - 8px);
+  }
+}
+
+@media screen and (max-width:749px){
+  .natural-ingredients-box {
+    width: calc(50% - 8px);
+  }
+}

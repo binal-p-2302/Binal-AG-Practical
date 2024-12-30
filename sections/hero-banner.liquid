@@ -1,0 +1,50 @@
+{{ 'section-hero-banner.css' | asset_url | stylesheet_tag }}
+<div class="hero-banner--wrapper">
+  <div class="hero-banner-video">
+    <img src="{{ section.settings.hero_image | img_url: '2048x' }}" loading="lazy" alt="Hero Banner">
+  </div>
+  <div class="hero-banner-content">
+    <div class="page-width">
+      <h1>{{ section.settings.hero_heading | default: 'Great things never came<br> from comfort zones.' }}</h1>
+      {% if section.settings.hero_button_link %}
+        <a href="{{ section.settings.hero_button_link }}">
+          {{- section.settings.hero_button_text | default: 'Shop Now' -}}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hero_heading",
+      "label": "Hero Heading",
+      "default": "Great things never came<br> from comfort zones."
+    },
+    {
+      "type": "url",
+      "id": "hero_button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image",
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}

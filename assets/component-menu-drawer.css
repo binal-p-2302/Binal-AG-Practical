@@ -96,6 +96,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .js .menu-drawer__menu li {
   margin-bottom: 0.2rem;
+  padding: 10px 0;
 }
 
 .menu-drawer__menu-item {

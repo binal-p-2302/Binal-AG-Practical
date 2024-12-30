@@ -1477,6 +1477,15 @@ a.product__text {
 .recipient-form .error-message::first-letter {
   text-transform: capitalize;
 }
+/* th.variant-qty {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+} */
+.variant-qty-icon{
+  cursor:pointer;
+}
+
 
 @media screen and (forced-colors: active) {
   .recipient-fields > hr {

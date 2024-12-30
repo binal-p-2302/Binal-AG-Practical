@@ -23,6 +23,12 @@ class CartItems extends HTMLElement {
     }, ON_CHANGE_DEBOUNCE_TIMER);
 
     this.addEventListener('change', debouncedOnChange.bind(this));
+
+      this.addEventListener('click', (event) => {
+        if (event.target.classList.contains('block__cart-item-subscribe')) {
+          this.onSubscribeClick(event);
+        }
+      });
   }
 
   cartUpdateUnsubscriber = undefined;
@@ -59,7 +65,8 @@ class CartItems extends HTMLElement {
     const inputValue = parseInt(event.target.value);
     const index = event.target.dataset.index;
     let message = '';
-
+    const property = event.target.closest(".cart-item__details");
+    const opTypeText = property.querySelector(".product-op-type").textContent.trim(); 
     if (inputValue < event.target.dataset.min) {
       message = window.quickOrderListStrings.min_error.replace('[min]', event.target.dataset.min);
     } else if (inputValue > parseInt(event.target.max)) {
@@ -77,8 +84,20 @@ class CartItems extends HTMLElement {
         index,
         inputValue,
         document.activeElement.getAttribute('name'),
-        event.target.dataset.quantityVariantId
+        event.target.dataset.quantityVariantId,
+        opTypeText
       );
+    }
+  }
+  onSubscribeClick(event) {
+    event.preventDefault();
+    const cartItemElement = event.target.closest(".block_cart-drawer-qty-box");
+    const line = cartItemElement.querySelector(".quantity__input").dataset.index;
+    const quantityInput = cartItemElement.querySelector(".quantity__input");
+    const variantId = cartItemElement.querySelector(".quantity__input").dataset.quantityVariantId;
+    if (quantityInput) {
+      const newValue = parseInt(quantityInput.value, 10);
+      this.updateQuantity(line, newValue, document.activeElement.getAttribute('name'), variantId, 'Subscribe & Save');
     }
   }
 
@@ -143,12 +162,13 @@ class CartItems extends HTMLElement {
     ];
   }
 
-  updateQuantity(line, quantity, name, variantId) {
+  updateQuantity(line, quantity, name, variantId, type) {
     this.enableLoading(line);
 
     const body = JSON.stringify({
       line,
       quantity,
+      properties: { Type: type },
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname,
     });
@@ -208,6 +228,31 @@ class CartItems extends HTMLElement {
         }
 
         publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-items', cartData: parsedState, variantId: variantId });
+        
+
+        setTimeout(() =>{
+          $('.block_cart-drawer-collection-slider').slick({
+            infinite: true,
+            slidesToShow: 2,
+            centerMode: true,
+            centerPadding: '86px',
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            prevArrow: $('.drawer-collection-prev'),
+            nextArrow: $('.drawer-collection-next'),
+            responsive: [
+              {
+                  breakpoint: 749,
+                  settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1,
+                  }
+              }
+          ]
+          });
+        } , 1500)
+
       })
       .catch(() => {
         this.querySelectorAll('.loading__spinner').forEach((overlay) => overlay.classList.add('hidden'));
@@ -216,6 +261,11 @@ class CartItems extends HTMLElement {
       })
       .finally(() => {
         this.disableLoading(line);
+
+     
+     
+
+
       });
   }
 

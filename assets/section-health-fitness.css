@@ -1,0 +1,50 @@
+.health-box--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 50px;
+    padding-bottom: 80px;
+}
+
+.health-box {
+    width: calc(25% - 24px);
+}
+
+.health-box svg {
+    display: block;
+}
+
+.health-box h4 {
+    font-family: Rubik;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.33px;
+    text-align: left;
+    margin: 24px 0 16px;
+    letter-spacing: 0;
+}
+
+.health-box p {
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #1B1F23CC;
+    margin: 0;
+}
+
+.health-fitness--wrapper {
+    padding-top: 80px;
+}
+
+@media (min-width:1200px) and (max-width:1359px){
+  .health-box h4 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width:989px){
+    .health-box {
+      width: calc(50% - 16px);
+    }
+}
