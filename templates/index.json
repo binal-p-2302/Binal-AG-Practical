@@ -251,60 +251,42 @@
           "type": "block",
           "settings": {
             "text": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/20ad7432acfb4ed89d0a73b53bac2004.mp4",
-            "img": "shopify:\/\/shop_images\/Rectangle_462.png",
-            "image_with_text_image": "shopify:\/\/shop_images\/Group_38782.png",
-            "title": "Magnesium L-Threonate",
-            "price": "$49.95"
+            "img": "shopify:\/\/shop_images\/Rectangle_462.png"
           }
         },
         "block_7yUHEM": {
           "type": "block",
           "settings": {
             "text": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/02666aae293c442ebe4891a5d7a7ddf7.mp4",
-            "img": "shopify:\/\/shop_images\/Rectangle_465_2.png",
-            "image_with_text_image": "shopify:\/\/shop_images\/Group_38782.png",
-            "title": "Magnesium L-Threonate",
-            "price": "$49.95"
+            "img": "shopify:\/\/shop_images\/Rectangle_465_2.png"
           }
         },
         "block_BhBwh7": {
           "type": "block",
           "settings": {
             "text": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3ed6fdeaa5ad4c65bffdd1f27574fe4b.mp4",
-            "img": "shopify:\/\/shop_images\/Rectangle_4658.png",
-            "image_with_text_image": "shopify:\/\/shop_images\/Group_38782.png",
-            "title": "Magnesium L-Threonate",
-            "price": "$49.95"
+            "img": "shopify:\/\/shop_images\/Rectangle_4658.png"
           }
         },
         "block_CKbXGB": {
           "type": "block",
           "settings": {
             "text": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/bf9a7b108cd24ee0a771fa0b8105e841.mp4",
-            "img": "shopify:\/\/shop_images\/Rectangle_4658.png",
-            "image_with_text_image": "shopify:\/\/shop_images\/Group_38782.png",
-            "title": "Magnesium L-Threonate",
-            "price": "$49.95"
+            "img": "shopify:\/\/shop_images\/Rectangle_4658.png"
           }
         },
         "block_mjVJCm": {
           "type": "block",
           "settings": {
             "text": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ab3bfd9b7d844ee89cf01b96ce124f65.mp4",
-            "img": "shopify:\/\/shop_images\/Rectangle_465.png",
-            "image_with_text_image": "shopify:\/\/shop_images\/Group_38782.png",
-            "title": "Magnesium L-Threonate",
-            "price": "$49.95"
+            "img": "shopify:\/\/shop_images\/Rectangle_465.png"
           }
         },
         "block_FrN7XY": {
           "type": "block",
           "settings": {
             "text": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/13e273ea8a8849e4b5cee1afadb27582.mp4",
-            "img": "shopify:\/\/shop_images\/Rectangle_465_1.png",
-            "image_with_text_image": "shopify:\/\/shop_images\/Group_38782.png",
-            "title": "Magnesium L-Threonate",
-            "price": "$49.95"
+            "img": "shopify:\/\/shop_images\/Rectangle_465_1.png"
           }
         }
       },

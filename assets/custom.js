@@ -49,28 +49,22 @@ $(document).ready(function () {
                     {
                         breakpoint: 989,
                         settings: {
-                            slidesToShow: 2,
+                            slidesToShow: 3,
                             slidesToScroll: 1,
-                            centerMode: false,
-                            // centerPadding: '0px',
                         },
                     },
                     {
                         breakpoint: 749,
                         settings: {
-                            slidesToShow: 2,
+                            slidesToShow: 3,
                             slidesToScroll: 1,
-                            centerMode: false,
-                            // centerPadding: '0px',
                         }
                     },
                     {
-                        breakpoint: 369,
+                        breakpoint: 575,
                         settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1,
-                            centerMode: false,
-                            // centerPadding: '0px',
                         }
                     }
                 ]

@@ -65,7 +65,6 @@ function updateData() {
       }
 
       let dataPrice = button.dataset.price;
-      console.log("dataPrice", dataPrice)
       if(dataPrice){
         let closestTr = button.closest("tr");
         if(closestTr){
@@ -109,7 +108,6 @@ function updateData() {
               quickViewVariantTable.querySelectorAll("[name='qty']").forEach(function(element){
                 totalQty += Number(element.value);
               })
-              console.log("totalQty", totalQty);
               let productInfo = quickViewVariantTable.closest("product-info");
               if(productInfo){
                 
@@ -136,7 +134,6 @@ function updateData() {
                     totalItemPrice.innerHTML = Shopify.formatMoney(totalPrice, '${{amount}}');
                   }
                 }
-                console.log("totalPrice", totalPrice);
               }
             }
 
